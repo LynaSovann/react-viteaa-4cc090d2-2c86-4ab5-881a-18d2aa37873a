@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: react-viteaa-4cc090d2-2c86-4ab5-881a-18d2aa37873a-container
-          image: pipejet/sovannlyna-react-viteaa:0
+          image: pipejet/sovannlyna-react-viteaa:1
           ports:
             - containerPort: 5173
