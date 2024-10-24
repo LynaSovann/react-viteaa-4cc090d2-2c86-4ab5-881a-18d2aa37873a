@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: react-viteaa-4cc090d2-2c86-4ab5-881a-18d2aa37873a-https-ingress
+  namespace: react-viteaa-4cc090d2-2c86-4ab5-881a-18d2aa37873a
+  annotations:
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/use-regex: "true"
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - sovannlyna-react-viteaa.tinhlgkiddy.fun
+      secretName: react-viteaa-4cc090d2-2c86-4ab5-881a-18d2aa37873a-secret-tls
+  rules:
+    - host: sovannlyna-react-viteaa.tinhlgkiddy.fun
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: react-viteaa-4cc090d2-2c86-4ab5-881a-18d2aa37873a-service 
+                port:
+                  number: 8085
