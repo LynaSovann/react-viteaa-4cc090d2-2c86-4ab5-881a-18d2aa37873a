@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: react-viteaa-4cc090d2-2c86-4ab5-881a-18d2aa37873a-certificate
+  namespace: react-viteaa-4cc090d2-2c86-4ab5-881a-18d2aa37873a
+spec:
+  secretName: react-viteaa-4cc090d2-2c86-4ab5-881a-18d2aa37873a-secret-tls
+  commonName: sovannlyna-react-viteaa.tinhlgkiddy.fun
+  dnsNames:
+  - sovannlyna-react-viteaa.tinhlgkiddy.fun
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
